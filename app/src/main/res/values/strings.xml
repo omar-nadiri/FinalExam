@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Physho</string>
+
+    <string name="all_view_pager_size"> /%1$s</string>
+    <string name="details_name">Name</string>
+
+
+    <string name="shr_featured_label">Featured</string>
+    <string name="shr_apartment_label">Apartment</string>
+    <string name="shr_accessories_label">Accessories</string>
+    <string name="shr_shoes_label">Shoes</string>
+    <string name="shr_tops_label">Tops</string>
+    <string name="shr_bottoms_label">Bottoms</string>
+    <string name="shr_dresses_label">Dresses</string>
+    <string name="shr_account_label">My Account</string>
+    <string name="shr_logo_content_description">Shrine Logo</string>
+    <string name="error_text">Something went wrong !!</string>
+    <string name="empty_text">There is nothing to show !!</string>
+    <string name="favourite_button">Favourite button</string>
+    <string name="change_layout">Change Layout</string>
+    <string name="search">Search</string>
+    <string name="animation_name">translationY</string>
+    <string name="image_view_error_message">updateIcon() must be called on an ImageView</string>
+    <string name="distance_in_miles">%1$s Mi</string>
+    <string name="result_could_not_be_loaded">Result could not be loaded</string>
+    <string name="retry">Retry</string>
+    <string name="pet">Pet</string>
+
+    <string name="coat">Coat</string>
+    <string name="pet_color">Color</string>
+    <string name="error_filter_refresh">error_filter_refresh</string>
+    <string name="filter">Filter</string>
+    <string name="summery">Summery</string>
+    <string name="gender">Gender</string>
+    <string name="age">Age</string>
+    <string name="sie">Size</string>
+    <string name="adopt_now">ADOPT NOW</string>
+</resources>

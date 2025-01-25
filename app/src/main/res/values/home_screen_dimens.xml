@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="section_title_size">20sp</dimen>
+    <dimen name="content_margin_start">20dp</dimen>
+    <dimen name="all_news_item_size">13sp</dimen>
+    <dimen name="view_pager_height">220dp</dimen>
+</resources>

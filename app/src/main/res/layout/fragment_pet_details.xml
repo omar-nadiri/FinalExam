@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.details.PetDetailsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp"
+            android:visibility="visible">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCurrentPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.2"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/section_title_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/vpPhotos"
+                app:layout_constraintEnd_toStartOf="@id/tvAllPhotoSize"
+                tools:text="0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAllPhotoSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/content_margin_start"
+                android:layout_marginBottom="2dp"
+                android:letterSpacing="0.3"
+                android:textColor="@color/primary_light"
+                android:textSize="@dimen/all_news_item_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/vpPhotos"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@string/all_view_pager_size" />
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpPhotos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_pager_height"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_margin_start"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:textColor="@color/primary_dark"
+                android:textSize="@dimen/section_title_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vpPhotos"
+                tools:text="@string/details_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/emailIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:tint="@color/primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                app:srcCompat="@drawable/ic_email" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:textColor="@color/primary_dark"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@id/emailIcon"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="email" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/detailsFavouriteBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_favorite_empty"
+                app:backgroundTint="@color/primary_light"
+                app:fabCustomSize="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vpPhotos"
+                app:tint="@color/white" />
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/attributesChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layoutDirection="locale"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/littleSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:maxLines="1"
+                android:text="@string/summery"
+                android:textColor="@color/primary_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/attributesChipGroup" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/summery"
+                android:textColor="@color/primary_light"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/littleSummary" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/gender"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#D69090"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/age"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/description">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/genderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gender"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/age"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#90D6A4"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                app:layout_constraintEnd_toStartOf="@+id/size"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/gender"
+                app:layout_constraintTop_toBottomOf="@id/description">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/age"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/size"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_background"
+                android:backgroundTint="#C190D6"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/age"
+                app:layout_constraintTop_toBottomOf="@id/description">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/sizeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sie"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sie"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/age"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/adopt_now"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/primary_light"
+                android:background="@drawable/rounded_background"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

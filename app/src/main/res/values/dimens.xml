@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="news_view_pager_item_margin">20dp</dimen>
+    <dimen name="news_vp_title_size">20sp</dimen>
+    <dimen name="news_vp_description_size">15sp</dimen>
+
+    <dimen name="PARTIALLY_OPENED_PORTRAIT">610dp</dimen>
+    <dimen name="FULL_OPENED_PORTRAIT">380dp</dimen>
+
+    <dimen name="chip_width">40dp</dimen>
+    <dimen name="chip_corner_radius">5dp</dimen>
+    <dimen name="chip_stroke_width">3dp</dimen>
+    <dimen name="chip_stroke_width_bold">5dp</dimen>
+
+</resources>
